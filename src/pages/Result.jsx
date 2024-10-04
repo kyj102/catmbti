@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import styled from 'styled-components'
 import { Button } from 'react-bootstrap';
-import { ResultData } from '../assets/resultdata';
+import {ResultData} from "../assets/resultData"
 
 const Wrapper = styled.div`
   display: flex;
@@ -73,7 +73,7 @@ const Result = () => {
       <LogoImg>
         <img className='rounded-circle' src={resultData.image} />
       </LogoImg>
-      <Desc>😽예비집사님과 찰떡궁합인 고양이는😽 <br/> {ResultData.best}형 {ResultData.name}</Desc>
+      <Desc>😽예비집사님과 찰떡궁합인 고양이는😽 <br/> {resultData.best}형 {resultData.name}</Desc>
       <Button onClick={handleClickBtn}>테스트 다시하기</Button>
     </Contents>
   </Wrapper>
