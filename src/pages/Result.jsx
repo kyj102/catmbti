@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import styled from 'styled-components'
 import { Button } from 'react-bootstrap';
 import {ResultData} from "../assets/resultData"
+import KakaoShareButton from '../components/KakaoShareButton';
 
 const Wrapper = styled.div`
   display: flex;
@@ -52,6 +53,11 @@ const Desc = styled.div`
   border-radius: 8px;
 `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
 
 const Result = () => {
   const [resultData, setResultData] = useState({});
@@ -78,7 +84,10 @@ const Result = () => {
         <img className='rounded-circle' src={resultData.image} />
       </LogoImg>
       <Desc>😽예비집사님과 찰떡궁합인 고양이는😽 <br/> {resultData.best}형 {resultData.name}</Desc>
-      <Button onClick={handleClickBtn}>테스트 다시하기</Button>
+      <ButtonGroup>
+        <Button onClick={handleClickBtn}>테스트 다시하기</Button>
+        <KakaoShareButton/>
+      </ButtonGroup>
     </Contents>
   </Wrapper>
   )
